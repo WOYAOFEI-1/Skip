@@ -1,27 +1,20 @@
-/* ************************************************************************
-> File Name:     main.cpp
-> Author:        程序员Carl
-> 微信公众号:    代码随想录
-> Created Time:  Sun Dec  2 20:21:41 2018
-> Description:   
- ************************************************************************/
+
 #include <iostream>
 #include "skiplist.h"
 #define FILE_PATH "./store/dumpFile"
 
 int main() {
 
-    // 键值中的key用int型，如果用其他类型，需要自定义比较函数
-    // 而且如果修改key的类型，同时需要修改skipList.load_file函数
-    SkipList<int, std::string> skipList(6);
-	skipList.insert_element(1, "学"); 
-    	skipList.insert_element(112, "微信公众号：代码随想录"); 
-	skipList.insert_element(3, "算法"); 
-	skipList.insert_element(7, "认准"); 
 
-	skipList.insert_element(9, "学习"); 
-	skipList.insert_element(19, "算法不迷路"); 
-	skipList.insert_element(19, "赶快关注吧你会发现详见很晚！"); 
+    SkipList<int, std::string> skipList(6);
+	skipList.insert_element(1, "中国"); 
+    	skipList.insert_element(112, "日本"); 
+	skipList.insert_element(3, "印度"); 
+	skipList.insert_element(7, "寒国"); 
+
+	skipList.insert_element(9, "马来西亚"); 
+	skipList.insert_element(19, "德国"); 
+	skipList.insert_element(19, "英国"); 
 
     std::cout << "skipList size:" << skipList.size() << std::endl;
 
